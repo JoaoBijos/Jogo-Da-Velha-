@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <title>Jogo da Velha</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logo.png">
+    <link rel="stylesheet" href="./css/style.css"">
+</head>
+<body>
+
+  <div class="global">
+    <div class='gameBoard'></div>
+    <div class="rodape">
+      <div class="buttons">
+        <button class="restartButton" onclick="game.restart()">New Round</button>
+        <button class="resetButton" onClick="window.location.reload()">New Game</button>
+      </div>
+      <div class="score">
+        <div>X = <span id="Xpoints">0</span></div>
+        <div>O = <span id="Opoints">0</span></div>
+      </div>
+    </div>
+  </div>
+    <script src="./javascript/script.js"></script>
+    <script>
+        game.init( document.querySelector('.gameBoard') );
+        game.start();
+    </script>
+</body>
+</html> 
